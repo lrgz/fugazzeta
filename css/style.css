@@ -1142,7 +1142,7 @@ footer {
         border: 2px solid #287B48;
         border-radius: 10px;
         display: flex;
-
+        flex-direction: column;
     }
 
     .cardProductoImg img {
@@ -1274,7 +1274,7 @@ footer {
     .filosofia{
         margin: 10px 50px 10px 50px;
         display: flex;
-        flex-flow: row ;
+        flex-flow: column ;
         justify-content: center;
     }
 
