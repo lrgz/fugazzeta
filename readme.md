@@ -14,10 +14,11 @@
 
 - [Funcionalidades](#funcionalidades)
 
+- [Pantallas](#pantallas)
 
-- [Herramioentas Utilizadas](#herrramientas-utilizadas)
+- [Herramientas Utilizadas](#herramientas-utilizadas)
 
-
+- [Demo](#demo)
 
 <br>
 
@@ -76,7 +77,7 @@
 
 <br>
 
-## Acceso
+## Demo
 [Fugazzeta](https://lrgz.github.io/fugazzeta/)
 
 <hr>
