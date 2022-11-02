@@ -1,0 +1,23 @@
+ain{
+    grid-area: main;
+    background-color: $color-background;
+    @include props-flex(column,nowrap,none,none);
+    h1{
+        @include title-1;
+    };
+    h2{
+        @include title-2;
+    };
+}
+
+.bannerContacto{
+    @include banners("../assets/img/bg-contacto.jpg",center,contain,cover,300px);
+}
+
+
+
+.contacto {
+    margin: 10px 50px 10px 50px;	
+}
+
+@import "../componets/_form.scss";

@@ -1,0 +1,45 @@
+
+.formContenido{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formTitulo{
+    text-align: center;
+}
+
+.form{
+    max-width: 500px;
+    width: 80%;
+    padding: 2rem;
+}
+
+.formGrupo{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 7px;
+}
+
+.formLabel{
+    margin-bottom: 2px;
+}
+
+
+.formInput,
+.formSubmit{
+    padding: .5rem;
+    border-radius: 3px;
+    border: none;
+    outline-color: $color-border-box;
+}
+
+.formSubmit{
+    background-color: $color-border-box;
+    color: $color-white;
+    text-transform: uppercase;
+    margin-top: 5px;
+    transition: background-color .5s ease;
+}

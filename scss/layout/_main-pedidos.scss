@@ -1,0 +1,51 @@
+main{
+    grid-area: main;
+    background-color: $color-background;
+    @include props-flex(column,nowrap,none,none);
+    h1{
+        @include title-1;
+    };
+    h2{
+        @include title-2;
+    };
+}
+
+.bannerPedidos{
+    @include banners("../assets/img/bg-pedidos.jpg",center,contain,cover,300px);
+}
+
+
+
+.pedidos {
+    @include props-flex(wrap,wrap,space-evenly,stretch);
+    align-content: stretch;
+}
+
+.pedidoContenido {
+    padding: 1.4em;
+    text-align: center;
+    h2 {
+        margin-top: 0;
+        margin-bottom: .5em;
+        font-weight: bold;
+        font-size: 24px;
+        text-align: center;
+        color: $color-red;
+    };
+    p {
+        font-size: 14px;
+    };
+}
+
+.pedido {
+    flex: 0 1 24%;
+    border: 1px solid $color-border-box;
+    background-color: $color-backgroud-box;
+    justify-content: center;
+    align-content: center;
+    margin: 5px 5px 5px 5px ;
+}
+
+.thumbnail{
+    @include props-flex(column,wrap,center,center);
+}
