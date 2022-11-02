@@ -1,0 +1,109 @@
+main{
+    grid-area: main;
+    background-color: $color-background;
+    @include props-flex(column,nowrap,none,none);
+    h1{
+        @include title-1;
+    };
+    h2{
+        @include title-2;
+    };
+}
+
+.bannerInicio{
+    @include banners("../assets/img/bg-inicio.jpg",center,contain,cover,250px);
+}
+
+.producto{
+    margin: 10px 20px 10px 20px;
+    @include props-flex(row,nowrap,center,none);
+}
+
+.cardProducto{
+    @include card-info(10px,20px,10px,20px,$color-white, 2px ,solid ,$color-green,10px);
+    display: flex;
+}
+
+
+.cardProductoImg img {
+    margin: 5px 30px 30px 5px;
+    height: 64px;
+    width: 64px;
+    justify-content: center;
+}
+
+
+
+.cardProductoLeyenda{
+    dt{
+        @include card-dt(14px) ;
+    }
+    dd{
+        @include card-dd (10px);
+    }
+}
+
+.tiempo{
+    margin: 10px 50px 10px 50px;
+    @include props-flex(row,nowrap,center,none);
+}   
+
+.tiempoStrong {
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+}
+
+.cardTiempo strong span {
+    background: url(../assets/img/time_panel.svg) no-repeat 0 0;
+    display: inline-block;
+    width: 80px;
+    margin-left: 10px;
+    height: 120px;
+    font-size: 72px;
+    color: $color-green;
+    line-height: 120px;
+    text-shadow: 1px 1px 2px $color-white;
+    text-align: center;
+}
+
+.cardTiempo p {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: $color-green;
+    font-weight: 700;
+    text-align: center;
+}
+
+.destacada{
+    @include props-flex(column,wrap,center,none);
+    flex-direction: row;
+}
+
+
+.cardDestacada{
+    @include card-info(10px,20px,10px,20px,$color-white, 1.5px ,solid ,$color-green,10px);
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+.cardDestacadaImg img {
+    margin: 5px 30px 30px 5px;
+    height: 64px;
+    width: 64px;
+    justify-content: center;
+}
+
+
+
+.cardDestacadaLeyenda {
+    dt{
+        @include card-dt(14px) ;
+    }
+    dd{
+        @include card-dd (10px);
+    }
+}

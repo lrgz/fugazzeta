@@ -1,1490 +1,704 @@
-/*****************************************
-***** Dominio : fugazzeta.com.ar     *****
-***** sub-dominio : www              *****
-***** Acchivos : style.css           *****
-***** Autor : Rodrigo Zerrezuela     *****
-***** Fecha : 2022-09                *****
-***** Version : 1.0.0                *****
-******************************************/
-
+/*******************************************
+***** Dominio : fugazzeta.com.ar       *****
+***** sub-dominio : www                *****
+***** Archivo :  style.css             *****
+***** Autor : Rodrigo Zerrezuela       *****
+***** Fecha : 2022-10                  *****
+***** Version : 1.1.0                  *****
+********************************************/
+/*****************************
+ *****     VARIABLES     *****
+ *****************************/
+/**************************
+ *****     MIXUNS     *****
+ **************************/
+/******************************(**
+ *****     IMPORTS FONTS     *****
+ *********************************/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:ital,wght@0,400;0,500;1,400&display=swap");
+/*************************
+ *****     FONTS     *****
+ *************************/
 /*************************
  *****     RESET     ***** 
  *************************/
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;    
-}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box; }
 
 /***************************
  *****     GENERAL     ***** 
  ***************************/
-body{
-    background-color: #ECECEC;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-     
-}
+body {
+  background-color: #ECECEC;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px; }
 
-h1 {
-    font-family: 'Lato', sans-serif;
-    font-size: 36px;
-    font-weight: 300px;
-    color:#FFFFFF  ;
-    text-transform: uppercase ;
-    text-align: right;
-}
+/**************************
+ *****     LAYOUT     *****
+ **************************/
+.containerLayout {
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: "header header header header" "main main main main" "footer footer footer footer"; }
 
-h2 {
-    margin-top: 10px;
-    font-family: 'Lato', sans-serif;
-    font-size: 28px;
-    font-weight: 300px;
-    color:#287B48  ;
-    text-transform: uppercase ;
-    text-align: center;
-}
+header {
+  grid-area: header;
+  background-color: #383838;
+  display: flex;
+  flex-flow: column;
+  flex-wrap: nowrap;
+  justify-content: none;
+  align-items: none; }
 
- h3 {
-    font-family: 'Lato', sans-serif;
-    font-size: 20px;
-    font-weight: 100px;
-    color:#FFFFFF  ;
-    text-align: left;
-}
+.topMenu {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  justify-content: none;
+  align-items: flex-star; }
 
-.nav-link{
-    text-decoration: none;
-    color: white;
-}
+.logoTop {
+  flex: 1 1 auto; }
 
-.nav-link:focus, .nav-link:hover {
-    color:rgb(40, 123, 72) ;
-}
+.nav-link {
+  text-decoration: none;
+  color: #FFFFFF; }
+  .nav-link:focus {
+    color: #287b48; }
+  .nav-link:hover {
+    color: #287b48; }
 
 .navbar-toggler {
-    border-color: rgb(40, 123, 72);
-}
-
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba%2840, 123, 72, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
-}
-
-.navbar-toggler:focus {
+  border-color: #287b48; }
+  .navbar-toggler:focus {
     text-decoration: none;
     outline: 0;
     box-shadow: 0 0 0 var(--bs-navbar-toggler-focus-width);
-    color:#287B48
-}
+    color: #287b48; }
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba%2840, 123, 72, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>"); }
+
+main {
+  grid-area: main;
+  background-color: #ECECEC;
+  display: flex;
+  flex-flow: column;
+  flex-wrap: nowrap;
+  justify-content: none;
+  align-items: none; }
+  main h1 {
+    font-family: "Lato", sans-serif;
+    font-size: 36px;
+    font-weight: 300px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    text-align: right; }
+  main h2 {
+    margin-top: 10px;
+    font-family: "Lato", sans-serif;
+    font-size: 28px;
+    font-weight: 300px;
+    color: #287b48;
+    text-transform: uppercase;
+    text-align: center; }
+
+.bannerInicio {
+  background-image: url("../assets/img/bg-inicio.jpg");
+  background-position: center;
+  background-attachment: contain;
+  background-size: cover;
+  height: 250px; }
+
+.producto {
+  margin: 10px 20px 10px 20px;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: none; }
+
+.cardProducto {
+  margin: 10px 20px 10px 20px;
+  background-color: #FFFFFF;
+  border: 2px solid #287b48;
+  border-radius: 10px;
+  display: flex; }
+
+.cardProductoImg img {
+  margin: 5px 30px 30px 5px;
+  height: 64px;
+  width: 64px;
+  justify-content: center; }
+
+.cardProductoLeyenda dt {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: #892F30;
+  margin-top: 15px;
+  margin-left: 10px; }
+
+.cardProductoLeyenda dd {
+  font-family: "Open Sans", sans-serif;
+  font-size: 10px;
+  color: #000000;
+  margin-top: 10px;
+  margin-left: 10px; }
+
+.tiempo {
+  margin: 10px 50px 10px 50px;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: none; }
+
+.tiempoStrong {
+  font-weight: bolder;
+  display: flex;
+  justify-content: center; }
+
+.cardTiempo strong span {
+  background: url(../assets/img/time_panel.svg) no-repeat 0 0;
+  display: inline-block;
+  width: 80px;
+  margin-left: 10px;
+  height: 120px;
+  font-size: 72px;
+  color: #287b48;
+  line-height: 120px;
+  text-shadow: 1px 1px 2px #FFFFFF;
+  text-align: center; }
+
+.cardTiempo p {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #287b48;
+  font-weight: 700;
+  text-align: center; }
+
+.destacada {
+  display: flex;
+  flex-flow: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: none;
+  flex-direction: row; }
+
+.cardDestacada {
+  margin: 10px 20px 10px 20px;
+  background-color: #FFFFFF;
+  border: 1.5px solid #287b48;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row; }
+
+.cardDestacadaImg img {
+  margin: 5px 30px 30px 5px;
+  height: 64px;
+  width: 64px;
+  justify-content: center; }
+
+.cardDestacadaLeyenda dt {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: #892F30;
+  margin-top: 15px;
+  margin-left: 10px; }
+
+.cardDestacadaLeyenda dd {
+  font-family: "Open Sans", sans-serif;
+  font-size: 10px;
+  color: #000000;
+  margin-top: 10px;
+  margin-left: 10px; }
+
+main {
+  grid-area: main;
+  background-color: #ECECEC;
+  display: flex;
+  flex-flow: column;
+  flex-wrap: nowrap;
+  justify-content: none;
+  align-items: none; }
+  main h1 {
+    font-family: "Lato", sans-serif;
+    font-size: 36px;
+    font-weight: 300px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    text-align: right; }
+  main h2 {
+    margin-top: 10px;
+    font-family: "Lato", sans-serif;
+    font-size: 28px;
+    font-weight: 300px;
+    color: #287b48;
+    text-transform: uppercase;
+    text-align: center; }
+
+.bannerNosotros {
+  background-image: url("../assets/img/bg-nosotros.jpg");
+  background-position: center;
+  background-attachment: contain;
+  background-size: cover;
+  height: 300px; }
+
+.historia {
+  margin: 10px 50px 10px 50px;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: none; }
+
+.historia img {
+  margin: 35px 30px 30px 15px;
+  height: 400px;
+  width: 400px;
+  justify-content: center; }
+
+.filosofia {
+  margin: 10px 50px 10px 50px;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: none;
+  justify-content: center;
+  align-items: none; }
+
+.cardFilosofia {
+  margin: 10px 50px 10px 50px;
+  border: 1.5px none;
+  border-radius: 10px;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: none;
+  justify-content: none;
+  align-items: none; }
+
+.cardFilosofiaLeyenda dt {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: #892F30;
+  margin-top: 15px;
+  margin-left: 10px; }
+
+.cardFilosofiaLeyenda dd {
+  font-family: "Open Sans", sans-serif;
+  font-size: 10px;
+  color: #000000;
+  margin-top: 10px;
+  margin-left: 10px; }
+
+main {
+  grid-area: main;
+  background-color: #ECECEC;
+  display: flex;
+  flex-flow: column;
+  flex-wrap: nowrap;
+  justify-content: none;
+  align-items: none; }
+  main h1 {
+    font-family: "Lato", sans-serif;
+    font-size: 36px;
+    font-weight: 300px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    text-align: right; }
+  main h2 {
+    margin-top: 10px;
+    font-family: "Lato", sans-serif;
+    font-size: 28px;
+    font-weight: 300px;
+    color: #287b48;
+    text-transform: uppercase;
+    text-align: center; }
+
+.bannerPromociones {
+  background-image: url("../assets/img/bg-promo.jpg");
+  background-position: center;
+  background-attachment: contain;
+  background-size: cover;
+  height: 300px; }
+
+.comboContenido {
+  padding: 1.4em; }
+  .comboContenido h2 {
+    margin-top: 0;
+    font-weight: bold;
+    color: #ED3237; }
+  .comboContenido p {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 10px; }
+
+.combos {
+  display: flex;
+  flex-flow: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: none;
+  margin-bottom: 6%; }
+
+.combo {
+  flex: 0 1 24%; }
+  .combo li {
+    list-style: none; }
+  .combo a {
+    text-decoration: none; }
+
+.unaColumnas {
+  display: flex;
+  flex-direction: row; }
+  .unaColumnas div {
+    flex: 1;
+    display: flex;
+    flex-flow: none;
+    flex-wrap: none;
+    justify-content: center;
+    align-items: center; }
+
+.dosColumnas {
+  display: flex;
+  flex-direction: row; }
+  .dosColumnas div {
+    flex: 1;
+    display: flex;
+    flex-flow: none;
+    flex-wrap: none;
+    justify-content: center;
+    align-items: center; }
+
+main {
+  grid-area: main;
+  background-color: #ECECEC;
+  display: flex;
+  flex-flow: column;
+  flex-wrap: nowrap;
+  justify-content: none;
+  align-items: none; }
+  main h1 {
+    font-family: "Lato", sans-serif;
+    font-size: 36px;
+    font-weight: 300px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    text-align: right; }
+  main h2 {
+    margin-top: 10px;
+    font-family: "Lato", sans-serif;
+    font-size: 28px;
+    font-weight: 300px;
+    color: #287b48;
+    text-transform: uppercase;
+    text-align: center; }
+
+.bannerPedidos {
+  background-image: url("../assets/img/bg-pedidos.jpg");
+  background-position: center;
+  background-attachment: contain;
+  background-size: cover;
+  height: 300px; }
+
+.pedidos {
+  display: flex;
+  flex-flow: wrap;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: stretch;
+  align-content: stretch; }
+
+.pedidoContenido {
+  padding: 1.4em;
+  text-align: center; }
+  .pedidoContenido h2 {
+    margin-top: 0;
+    margin-bottom: .5em;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    color: #ED3237; }
+  .pedidoContenido p {
+    font-size: 14px; }
+
+.pedido {
+  flex: 0 1 24%;
+  border: 1px solid #729A4A;
+  background-color: #d2cdcd;
+  justify-content: center;
+  align-content: center;
+  margin: 5px 5px 5px 5px; }
+
+.thumbnail {
+  display: flex;
+  flex-flow: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; }
+
+ain {
+  grid-area: main;
+  background-color: #ECECEC;
+  display: flex;
+  flex-flow: column;
+  flex-wrap: nowrap;
+  justify-content: none;
+  align-items: none; }
+  ain h1 {
+    font-family: "Lato", sans-serif;
+    font-size: 36px;
+    font-weight: 300px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    text-align: right; }
+  ain h2 {
+    margin-top: 10px;
+    font-family: "Lato", sans-serif;
+    font-size: 28px;
+    font-weight: 300px;
+    color: #287b48;
+    text-transform: uppercase;
+    text-align: center; }
+
+.bannerContacto {
+  background-image: url("../assets/img/bg-contacto.jpg");
+  background-position: center;
+  background-attachment: contain;
+  background-size: cover;
+  height: 300px; }
+
+.contacto {
+  margin: 10px 50px 10px 50px; }
+
+.formContenido {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.formTitulo {
+  text-align: center; }
+
+.form {
+  max-width: 500px;
+  width: 80%;
+  padding: 2rem; }
+
+.formGrupo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 7px; }
+
+.formLabel {
+  margin-bottom: 2px; }
+
+.formInput,
+.formSubmit {
+  padding: .5rem;
+  border-radius: 3px;
+  border: none;
+  outline-color: #729A4A; }
+
+.formSubmit {
+  background-color: #729A4A;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  margin-top: 5px;
+  transition: background-color .5s ease; }
+
+footer {
+  grid-area: footer;
+  background-color: #383838; }
 
 .text-muted {
-    color: white!important;
-}
+  color: #FFFFFF !important; }
 
-/**************************
- *****     LAYOUT     ***** 
- **************************/
-
-.containerLayout{
+/*******************************
+*****     MEDIA MOBILE     *****
+********************************/
+@media (max-width: 576px) {
+  body {
+    background-color: #ECECEC;
+    font-family: "Open Sans", sans-serif;
+    font-size: 10px; }
+  .containerLayout {
     display: grid;
     width: 100%;
     height: 100vh;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(3,1fr);
-    grid-template-areas: 
-    "header header header header"
-    "main main main main"
-    "footer footer footer footer";
-}
-
-header{
-    grid-area: header;
-    background-color: #383838;
-    display: flex;
-    flex-flow: column nowrap;
-}
-
-main{
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "header header header header" "main main main main" "footer footer footer footer"; }
+  main {
     grid-area: main;
     background-color: #ECECEC;
     display: flex;
-    flex-flow: column nowrap;
-}
-
-footer {
-    grid-area: footer;
-    background-color: #383838;
-    font-family: 'Lato', sans-serif; 
-    font-size: 14px;
-}
-
-/************************
- *****     HOME     ***** 
- ************************/
-
-.topMenu {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items:flex-start ;
-}
-
-.logoTop
-{   
-    flex: 1 1 auto;
-}
-
-.bannerInicio{
-    background-image: url("../assets/img/bg-inicio.jpg");
+    flex-flow: column;
+    flex-wrap: nowrap;
+    justify-content: none;
+    align-items: none; }
+    main h1 {
+      font-family: "Lato", sans-serif;
+      font-size: 36px;
+      font-weight: 300px;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      text-align: right;
+      font-size: 26px;
+      font-weight: 300px; }
+    main h2 {
+      margin-top: 10px;
+      font-family: "Lato", sans-serif;
+      font-size: 28px;
+      font-weight: 300px;
+      color: #287b48;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 22px;
+      font-weight: 300px; }
+  .bannerInicio {
+    background-image: url("../assets/img/bg-inicio-mobile.jpg");
     background-position: center;
     background-attachment: contain;
     background-size: cover;
-    height: 250px;
-    
-}
-
-.producto{
-    margin: 10px 20px 10px 20px;
-    display: flex;   
-    flex-flow: row nowrap;
-    justify-content: center;
-}
-
-.cardProducto{
-    margin: 10px 20px 10px 20px;
-    background-color: #FFFFFF;
-    border: 2px solid #287B48;
-    border-radius: 10px;
-    display: flex;
-
-}
-
-.cardProductoImg img {
-    margin: 5px 30px 30px 5px;
-    height: 64px;
-    width: 64px;
-    justify-content: center;
-}
-
-.cardProductoLeyenda dt {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
+    height: 150px; }
+  .cardProducto {
+    flex-direction: column; }
+  .cardProductoLeyenda dt {
+    font-family: "Open Sans", sans-serif;
+    font-size: 10px;
     font-weight: bold;
     color: #892F30;
     margin-top: 15px;
-    margin-left: 10px;
-}
-
-.cardProductoLeyenda dd{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 10px;
+    margin-left: 10px; }
+  .cardProductoLeyenda dd {
+    font-family: "Open Sans", sans-serif;
+    font-size: 9px;
     color: #000000;
     margin-top: 10px;
-    margin-left: 10px; 
-}
-
-.tiempo{
+    margin-left: 10px; }
+  .tiempo {
     margin: 10px 50px 10px 50px;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row;
+    flex-wrap: nowrap;
     justify-content: center;
-}   
-
-.tiempoStrong {
+    align-items: none; }
+  .tiempoStrong {
     font-weight: bolder;
     display: flex;
-    justify-content: center;
-}
-
-.cardTiempo strong span {
+    justify-content: center; }
+  .cardTiempo strong span {
     background: url(../assets/img/time_panel.svg) no-repeat 0 0;
     display: inline-block;
     width: 80px;
     margin-left: 10px;
     height: 120px;
     font-size: 72px;
-    color: #287B48;
+    color: #287b48;
     line-height: 120px;
-    text-shadow: 1px 1px 2px rgb(255 255 255);
-    text-align: center;
-}
-
-.cardTiempo p {
+    text-shadow: 1px 1px 2px #FFFFFF;
+    text-align: center; }
+  .cardTiempo p {
     margin-top: 15px;
     margin-bottom: 15px;
     font-size: 20px;
-    color: #287B48;
+    color: #287b48;
     font-weight: 700;
-    text-align: center;
-}
-
-.destacada{
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    flex-direction: row;
-}
-
-.cardDestacada{
-    margin: 10px 20px 10px 20px;
-    background-color: #FFFFFF;
-    border: 1.5px solid #287B48;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: row;
-   
-}
-
-.cardDestacadaImg img {
-    margin: 5px 30px 30px 5px;
-    height: 64px;
-    width: 64px;
-    justify-content: center;
-}
-
-.cardDestacadaLeyenda dt {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
+    text-align: center; }
+  .cardTiempo p {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #287b48;
+    font-weight: 700;
+    text-align: center; }
+  .cardDestacadaLeyenda dt {
+    font-family: "Open Sans", sans-serif;
+    font-size: 10px;
     font-weight: bold;
     color: #892F30;
     margin-top: 15px;
-    margin-left: 10px;
-}
-
-.cardDestacadaLeyenda dd{
-    font-family: 'Open Sans', sans-serif;
+    margin-left: 10px; }
+  .cardDestacadaLeyenda dd {
+    font-family: "Open Sans", sans-serif;
     font-size: 10px;
     color: #000000;
     margin-top: 10px;
-    margin-left: 10px; 
-}
-
-/****************************
- *****     NOSOTROS     ***** 
- ****************************/
-
-.bannerNosotros{
-    background-image: url("../assets/img/bg-nosotros.jpg");
+    margin-left: 10px; }
+  .bannerNosotros {
+    background-image: url("../assets/img/bg-nosotros-mobile.jpg");
     background-position: center;
     background-attachment: contain;
     background-size: cover;
-    height: 300px;
-}
-
-.historia{
-    margin: 10px 50px 10px 50px;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-}
-
-.historia img {
+    height: 150px; }
+  .historia img {
     margin: 35px 30px 30px 15px;
-    height: 400px;
-    width: 400px;
-    justify-content: center;
-}
-
-.filosofia{
-    margin: 10px 50px 10px 50px;
-    display: flex;
-    flex-flow: row ;
-    justify-content: center;
-}
-
-.cardFilosofia{
-    margin: 10px 50px 10px 50px;
-    border: 1.5px none;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: row;
-}
-
-.cardFilosofiaLeyenda dt {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
+    height: 200px;
+    width: 200px;
+    justify-content: center; }
+  .filosofia {
+    flex-flow: column; }
+  .cardFilosofiaLeyenda dt {
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
     font-weight: bold;
     color: #892F30;
     margin-top: 15px;
-    margin-left: 10px;
-}
-
-.cardFilosofiaLeyenda dd{
-    font-family: 'Open Sans', sans-serif;
+    margin-left: 10px; }
+  .cardFilosofiaLeyenda dd {
+    font-family: "Open Sans", sans-serif;
     font-size: 10px;
     color: #000000;
     margin-top: 10px;
-    margin-left: 10px; 
-}
-
-/*******************************
- *****     PROMOCIONES     ***** 
- *******************************/
- 
-.bannerPromociones{
-    background-image: url("../assets/img/bg-promo.jpg");
+    margin-left: 10px; }
+  .bannerPromociones {
+    background-image: url("../assets/img/bg-promo-mobile.jpg");
     background-position: center;
     background-attachment: contain;
     background-size: cover;
-    height: 300px;
-}
-
-.comboContenido {
-    padding: 1.4em;
-}
-    
-.comboContenido h2 {
-    margin-top: 0;
-    font-weight: bold;
-    color: #ED3237;
-}
-    
-.comboContenido p {
-    font-size: 14px;
-    text-align: center;
-    margin-bottom: 10px;
-}
-    
-.combos {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 6%;
-    justify-content: center;
-}
-    
-.combo {
-    flex: 0 1 24%;
-}
-.combo li{
-    list-style: none;
-
-}
-.combo li a{
-    text-decoration: none;
-    
-}
-.unaColumnas {
-    display: flex;
-    flex-direction: row
-}
-
-.unaColumnas div {
-    flex:1; 
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-
-.dosColumnas  {
-    display:flex;
-    flex-direction:row;
-}
-
-.dosColumnas div {
-    flex:1; 
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-
-/***************************
- *****     PEDIDOS     ***** 
- ***************************/
- 
-.bannerPedidos{
-    background-image: url("../assets/img/bg-pedidos.jpg");
+    height: 150px; }
+  .combos {
+    flex-direction: column;
+    flex-wrap: wrap; }
+  .comboContenido {
+    padding: 1.4em; }
+  .comboContenido h2 {
+    font-size: 22px; }
+  .comboContenido p {
+    font-size: 10px; }
+  .bannerPedidos {
+    background-image: url("../assets/img/bg-pedidos-mobile.jpg");
     background-position: center;
     background-attachment: contain;
     background-size: cover;
-    height: 300px;
-}   
-
-.pedidos {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
-    justify-content: space-evenly;
-    align-content: stretch;
-}
-    
-.pedidoContenido {
-    padding: 1.4em;
-    text-align: center;
-}
-
-.pedidoContenido h2 {
-    margin-top: 0;
-    margin-bottom: .5em;
-    font-weight: bold;
-    font-size: 24px;
-    text-align: center;
-    color: #ED3237;
-}
-    
-.pedidoContenido p {
-    font-size: 14px;
-}
-    
-.pedido {
-    flex: 0 1 24%;
-    border: 1px solid #729A4A;
-    background-color: #d2cdcd;
-    justify-content: center;
-    align-content: center;
-    margin: 5px 5px 5px 5px ;
-}
-
-.thumbnail{
-    display: flex;
+    height: 150px; }
+  .pedidos {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-/****************************
- *****     CONTACTO     ***** 
- ****************************/
-
-
-.bannerContacto{
-    background-image: url("../assets/img/bg-contacto.jpg");
+    flex-wrap: wrap; }
+  .pedidoContenido h2 {
+    font-size: 22px; }
+  .pedidoContenido p {
+    font-size: 10px; }
+  main h1 {
+    font-size: 26px;
+    font-weight: 300px; }
+  main h2 {
+    font-size: 22px;
+    font-weight: 300px; }
+  .bannerContacto {
+    background-image: url("../assets/img/bg-contacto-mobile.jpg");
     background-position: center;
     background-attachment: contain;
     background-size: cover;
-    height: 300px;
-}
-
-.contacto {
-    margin: 10px 50px 10px 50px;	
-}
-
-.formContenido{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-    
-.formTitulo{
-    text-align: center;
-}
-    
-.form{
-    max-width: 500px;
-    width: 80%;
-    padding: 2rem;
-}
-    
-.formGrupo{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 7px;
-}
-    
-.formLabel{
-    margin-bottom: 2px;
-}
-    
-.formInput,
-.formSubmit{
-    padding: .5rem;
-    border-radius: 3px;
-    border: none;
-
-    outline-color: #729A4A;
-}
-    
-.formSubmit{
-    background-color: #729A4A;
-    color: #fff;
-    text-transform: uppercase;
-    margin-top: 5px;
-    transition: background-color .5s ease;
-}
-
-/*******************************
-*****     MEDIA QUERYS     *****
-********************************/
-
-/************************
-*****     TABLE     *****
-*************************/
-
-@media (max-width:768px){
-
-    /***************************
-    *****     GENERAL     ***** 
-    ***************************/
-    body{
-        background-color: #ECECEC;
-        font-family: 'Open Sans', sans-serif;
-        font-size: 11px;
-        
-    }
-
-    h1 {
-        font-family: 'Lato', sans-serif;
-        font-size: 28px;
-        font-weight: 300px;
-        color:#FFFFFF  ;
-        text-transform: uppercase ;
-        text-align: right;
-    }
-
-    h2 {
-        margin-top: 10px;
-        font-family: 'Lato', sans-serif;
-        font-size: 24px;
-        font-weight: 300px;
-        color:#287B48  ;
-        text-transform: uppercase ;
-        text-align: center;
-    }
-
-    h3 {
-        font-family: 'Lato', sans-serif;
-        font-size: 16px;
-        font-weight: 100px;
-        color:#FFFFFF  ;
-        text-align: left;
-    }
-
-    .nav-link{
-        text-decoration: none;
-        color: white;
-    }
-
-    .nav-link:focus, .nav-link:hover {
-        color:rgb(40, 123, 72) ;
-    }
-
-    .navbar-toggler {
-        border-color: rgb(40, 123, 72);
-    }
-
-    .navbar-toggler-icon {
-        background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba%2840, 123, 72, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
-    }
-
-    .navbar-toggler:focus {
-        text-decoration: none;
-        outline: 0;
-        box-shadow: 0 0 0 var(--bs-navbar-toggler-focus-width);
-        color:#287B48
-    }
-
-    .text-muted {
-        color: white!important;
-    }
-
-    /**************************
-    *****     LAYOUT     ***** 
-    **************************/
-
-    .containerLayout{
-        display: grid;
-        width: 100%;
-        height: 100vh;
-        grid-template-columns: repeat(2,1fr);
-        grid-template-rows: repeat(3,1fr);
-        grid-template-areas: 
-        "header header header header"
-        "main main main main"
-        "footer footer footer footer";
-    }
-
-    header{
-        grid-area: header;
-        background-color: #383838;
-        display: flex;
-        flex-flow: column nowrap;
-    }
-
-    main{
-        grid-area: main;
-        background-color: #ECECEC;
-        display: flex;
-        flex-flow: column nowrap;
-    }
-
-    footer {
-        grid-area: footer;
-        background-color: #383838;
-        font-family: 'Lato', sans-serif; 
-        font-size: 12px;
-    }
-
-    /************************
-    *****     HOME     ***** 
-    ************************/
-
-    .topMenu {
-        display: flex;
-        flex-flow: row nowrap;
-        align-items:flex-start ;
-    }
-
-    .logoTop
-    {   
-        flex: 1 1 auto;
-    }
-
-    .bannerInicio{
-        background-image: url("../assets/img/bg-inicio-table.jpg");
-        background-position: center;
-        background-attachment: contain;
-        background-size: cover;
-        height: 200px;
-        
-    }
-
-    .producto{
-        margin: 10px 20px 10px 20px;
-        display: flex;   
-        flex-flow: row nowrap;
-        justify-content: center;
-    }
-
-    .cardProducto{
-        margin: 10px 20px 10px 20px;
-        background-color: #FFFFFF;
-        border: 2px solid #287B48;
-        border-radius: 10px;
-        display: flex;
-
-    }
-
-    .cardProductoImg img {
-        margin: 5px 30px 30px 5px;
-        height: 64px;
-        width: 64px;
-        justify-content: center;
-    }
-
-    .cardProductoLeyenda dt {
-        font-family: 'Open Sans', sans-serif;
-        font-size: 12px;
-        font-weight: bold;
-        color: #892F30;
-        margin-top: 15px;
-        margin-left: 10px;
-    }
-
-    .cardProductoLeyenda dd{
-        font-family: 'Open Sans', sans-serif;
-        font-size: 10px;
-        color: #000000;
-        margin-top: 10px;
-        margin-left: 10px; 
-    }
-
-    .tiempo{
-        margin: 10px 50px 10px 50px;
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: center;
-    }   
-
-    .tiempoStrong {
-        font-weight: bolder;
-        display: flex;
-        justify-content: center;
-    }
-
-    .cardTiempo strong span {
-        background: url(../assets/img/time_panel.svg) no-repeat 0 0;
-        display: inline-block;
-        width: 80px;
-        margin-left: 10px;
-        height: 120px;
-        font-size: 48px;
-        color: #287B48;
-        line-height: 120px;
-        text-shadow: 1px 1px 2px rgb(255 255 255);
-        text-align: center;
-    }
-
-    .cardTiempo p {
-        margin-top: 15px;
-        margin-bottom: 15px;
-        font-size: 20px;
-        color: #287B48;
-        font-weight: 700;
-        text-align: center;
-    }
-
-    .destacada{
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: center;
-        flex-direction: row;
-    }
-
-    .cardDestacada{
-        margin: 10px 20px 10px 20px;
-        background-color: #FFFFFF;
-        border: 1.5px solid #287B48;
-        border-radius: 10px;
-        display: flex;
-        flex-direction: row;
-    
-    }
-
-    .cardDestacadaImg img {
-        margin: 5px 30px 30px 5px;
-        height: 64px;
-        width: 64px;
-        justify-content: center;
-    }
-
-    .cardDestacadaLeyenda dt {
-        font-family: 'Open Sans', sans-serif;
-        font-size: 11px;
-        font-weight: bold;
-        color: #892F30;
-        margin-top: 15px;
-        margin-left: 10px;
-    }
-
-    .cardDestacadaLeyenda dd{
-        font-family: 'Open Sans', sans-serif;
-        font-size: 10px;
-        color: #000000;
-        margin-top: 10px;
-        margin-left: 10px; 
-    }
-
-    /****************************
-    *****     NOSOTROS     ***** 
-    ****************************/
-
-    .bannerNosotros{
-        background-image: url("../assets/img/bg-nosotros-table.jpg");
-        background-position: center;
-        background-attachment: contain;
-        background-size: cover;
-        height: 200px;
-    }
-
-    .historia{
-        margin: 10px 50px 10px 50px;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-    }
-
-    .historia img {
-        margin: 35px 30px 30px 15px;
-        height: 300px;
-        width: 300px;
-        justify-content: center;
-    }
-
-    .filosofia{
-        margin: 10px 50px 10px 50px;
-        display: flex;
-        flex-flow: row ;
-        justify-content: center;
-    }
-
-    .cardFilosofia{
-        margin: 10px 50px 10px 50px;
-        border: 1.5px none;
-        border-radius: 10px;
-        display: flex;
-        flex-direction: row;
-    }
-
-    .cardFilosofiaLeyenda dt {
-        font-family: 'Open Sans', sans-serif;
-        font-size: 14px;
-        font-weight: bold;
-        color: #892F30;
-        margin-top: 15px;
-        margin-left: 10px;
-    }
-
-    .cardFilosofiaLeyenda dd{
-        font-family: 'Open Sans', sans-serif;
-        font-size: 10px;
-        color: #000000;
-        margin-top: 10px;
-        margin-left: 10px; 
-    }
-
-    /*******************************
-    *****     PROMOCIONES     ***** 
-    *******************************/
-    
-    .bannerPromociones{
-        background-image: url("../assets/img/bg-promo-table.jpg");
-        background-position: center;
-        background-attachment: contain;
-        background-size: cover;
-        height: 200px;
-    }
-
-    .comboContenido {
-        padding: 1.4em;
-    }
-        
-    .comboContenido h2 {
-        margin-top: 0;
-        font-weight: bold;
-        color: #ED3237;
-    }
-        
-    .comboContenido p {
-        font-size: 12px;
-        text-align: center;
-        margin-bottom: 10px;
-    }
-        
-    .combos {
-        display: flex;
-        flex-wrap: wrap;
-        margin-bottom: 6%;
-        justify-content: center;
-    }
-        
-    .combo {
-        flex: 0 1 24%;
-    }
-    .combo li{
-        list-style: none;
-
-    }
-    .combo li a{
-        text-decoration: none;
-        
-    }
-    .unaColumnas {
-        display: flex;
-        flex-direction: row
-    }
-
-    .unaColumnas div {
-        flex:1; 
-        display:flex;
-        justify-content:center;
-        align-items:center;
-    }
-
-    .dosColumnas  {
-        display:flex;
-        flex-direction:row;
-    }
-
-    .dosColumnas div {
-        flex:1; 
-        display:flex;
-        justify-content:center;
-        align-items:center;
-    }
-
-    /***************************
-    *****     PEDIDOS     ***** 
-    ***************************/
-    
-    .bannerPedidos{
-        background-image: url("../assets/img/bg-pedidos-table.jpg");
-        background-position: center;
-        background-attachment: contain;
-        background-size: cover;
-        height: 200px;
-    }   
-
-    .pedidos {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: stretch;
-        justify-content: space-evenly;
-        align-content: stretch;
-    }
-        
-    .pedidoContenido {
-        padding: 1.4em;
-        text-align: center;
-    }
-
-    .pedidoContenido h2 {
-        margin-top: 0;
-        margin-bottom: .5em;
-        font-weight: bold;
-        font-size: 22px;
-        text-align: center;
-        color: #ED3237;
-    }
-        
-    .pedidoContenido p {
-        font-size: 12px;
-    }
-        
-    .pedido {
-        flex: 0 1 24%;
-        border: 1px solid #729A4A;
-        background-color: #d2cdcd;
-        justify-content: center;
-        align-content: center;
-        margin: 5px 5px 5px 5px ;
-    }
-
-    .thumbnail{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    /****************************
-    *****     CONTACTO     ***** 
-    ****************************/
-
-
-    .bannerContacto{
-        background-image: url("../assets/img/bg-contacto-table.jpg");
-        background-position: center;
-        background-attachment: contain;
-        background-size: cover;
-        height: 200px;
-    }
-
-    .contacto {
-        margin: 10px 50px 10px 50px;	
-    }
-
-    .formContenido{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-        
-    .formTitulo{
-        text-align: center;
-    }
-        
-    .form{
-        max-width: 500px;
-        width: 80%;
-        padding: 2rem;
-    }
-        
-    .formGrupo{
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 7px;
-    }
-        
-    .formLabel{
-        margin-bottom: 2px;
-    }
-        
-    .formInput,
-    .formSubmit{
-        padding: .5rem;
-        border-radius: 3px;
-        border: none;
-
-        outline-color: #729A4A;
-    }
-        
-    .formSubmit{
-        background-color: #729A4A;
-        color: #fff;
-        text-transform: uppercase;
-        margin-top: 5px;
-        transition: background-color .5s ease;
-    }
-}
-
-/*************************
-*****     MOBILE     *****
-**************************/
-
-@media (max-width: 576px){
-
-    /***************************
-    *****     GENERAL     ***** 
-    ***************************/
-    body{
-        background-color: #ECECEC;
-        font-family: 'Open Sans', sans-serif;
-        font-size: 10px;
-        
-    }
-
-    h1 {
-        font-family: 'Lato', sans-serif;
-        font-size: 26px;
-        font-weight: 300px;
-        color:#FFFFFF  ;
-        text-transform: uppercase ;
-        text-align: right;
-    }
-
-    h2 {
-        margin-top: 10px;
-        font-family: 'Lato', sans-serif;
-        font-size: 22px;
-        font-weight: 300px;
-        color:#287B48  ;
-        text-transform: uppercase ;
-        text-align: center;
-    }
-
-    h3 {
-        font-family: 'Lato', sans-serif;
-        font-size: 14px;
-        font-weight: 100px;
-        color:#FFFFFF  ;
-        text-align: left;
-    }
-
-    .nav-link{
-        text-decoration: none;
-        color: white;
-    }
-
-    .nav-link:focus, .nav-link:hover {
-        color:rgb(40, 123, 72) ;
-    }
-
-    .navbar-toggler {
-        border-color: rgb(40, 123, 72);
-    }
-
-    .navbar-toggler-icon {
-        background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba%2840, 123, 72, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
-    }
-
-    .navbar-toggler:focus {
-        text-decoration: none;
-        outline: 0;
-        box-shadow: 0 0 0 var(--bs-navbar-toggler-focus-width);
-        color:#287B48
-    }
-
-    .text-muted {
-        color: white!important;
-    }
-
-    /**************************
-    *****     LAYOUT     ***** 
-    **************************/
-
-    .containerLayout{
-        display: grid;
-        width: 100%;
-        height: 100vh;
-        grid-template-columns: repeat(1,1fr);
-        grid-template-rows: repeat(3,1fr);
-        grid-template-areas: 
-        "header header header header"
-        "main main main main"
-        "footer footer footer footer";
-    }
-
-    header{
-        grid-area: header;
-        background-color: #383838;
-        display: flex;
-        flex-flow: column nowrap;
-    }
-
-    main{
-        grid-area: main;
-        background-color: #ECECEC;
-        display: flex;
-        flex-flow: column nowrap;
-    }
-
-    footer {
-        grid-area: footer;
-        background-color: #383838;
-        font-family: 'Lato', sans-serif; 
-        font-size: 10px;
-    }
-
-    /************************
-    *****     HOME     ***** 
-    ************************/
-
-    .topMenu {
-        display: flex;
-        flex-flow: row nowrap;
-        align-items:flex-start ;
-    }
-
-    .logoTop
-    {   
-        flex: 1 1 auto;
-    }
-
-    .bannerInicio{
-        background-image: url("../assets/img/bg-inicio-mobile.jpg");
-        background-position: center;
-        background-attachment: contain;
-        background-size: cover;
-        height: 150px;
-        
-    }
-
-    .producto{
-        margin: 10px 20px 10px 20px;
-        display: flex;   
-        flex-flow: row nowrap;
-        justify-content: center;
-    }
-
-    .cardProducto{
-        margin: 10px 20px 10px 20px;
-        background-color: #FFFFFF;
-        border: 2px solid #287B48;
-        border-radius: 10px;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .cardProductoImg img {
-        margin: 5px 30px 30px 5px;
-        height: 64px;
-        width: 64px;
-        justify-content: center;
-    }
-
-    .cardProductoLeyenda dt {
-        font-family: 'Open Sans', sans-serif;
-        font-size: 10px;
-        font-weight: bold;
-        color: #892F30;
-        margin-top: 15px;
-        margin-left: 10px;
-    }
-
-    .cardProductoLeyenda dd{
-        font-family: 'Open Sans', sans-serif;
-        font-size: 9px;
-        color: #000000;
-        margin-top: 10px;
-        margin-left: 10px; 
-    }
-
-    .tiempo{
-        margin: 10px 50px 10px 50px;
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: center;
-    }   
-
-    .tiempoStrong {
-        font-weight: bolder;
-        display: flex;
-        justify-content: center;
-    }
-
-    .cardTiempo strong span {
-        background: url(../assets/img/time_panel.svg) no-repeat 0 0;
-        display: inline-block;
-        width: 80px;
-        margin-left: 10px;
-        height: 120px;
-        font-size: 48px;
-        color: #287B48;
-        line-height: 120px;
-        text-shadow: 1px 1px 2px rgb(255 255 255);
-        text-align: center;
-    }
-
-    .cardTiempo p {
-        margin-top: 15px;
-        margin-bottom: 15px;
-        font-size: 16px;
-        color: #287B48;
-        font-weight: 700;
-        text-align: center;
-    }
-
-    .destacada{
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: center;
-        flex-direction: row;
-    }
-
-    .cardDestacada{
-        margin: 10px 20px 10px 20px;
-        background-color: #FFFFFF;
-        border: 1.5px solid #287B48;
-        border-radius: 10px;
-        display: flex;
-        flex-direction: row;
-    
-    }
-
-    .cardDestacadaImg img {
-        margin: 5px 30px 30px 5px;
-        height: 64px;
-        width: 64px;
-        justify-content: center;
-    }
-
-    .cardDestacadaLeyenda dt {
-        font-family: 'Open Sans', sans-serif;
-        font-size: 10px;
-        font-weight: bold;
-        color: #892F30;
-        margin-top: 15px;
-        margin-left: 10px;
-    }
-
-    .cardDestacadaLeyenda dd{
-        font-family: 'Open Sans', sans-serif;
-        font-size: 10px;
-        color: #000000;
-        margin-top: 10px;
-        margin-left: 10px; 
-    }
-
-    /****************************
-    *****     NOSOTROS     ***** 
-    ****************************/
-
-    .bannerNosotros{
-        background-image: url("../assets/img/bg-nosotros-mobile.jpg");
-        background-position: center;
-        background-attachment: contain;
-        background-size: cover;
-        height: 150px;
-    }
-
-    .historia{
-        margin: 10px 50px 10px 50px;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-    }
-
-    .historia img {
-        margin: 35px 30px 30px 15px;
-        height: 200px;
-        width: 200px;
-        justify-content: center;
-    }
-
-    .filosofia{
-        margin: 10px 50px 10px 50px;
-        display: flex;
-        flex-flow: column ;
-        justify-content: center;
-    }
-
-    .cardFilosofia{
-        margin: 10px 50px 10px 50px;
-        border: 1.5px none;
-        border-radius: 10px;
-        display: flex;
-        flex-direction: row;
-    }
-
-    .cardFilosofiaLeyenda dt {
-        font-family: 'Open Sans', sans-serif;
-        font-size: 12px;
-        font-weight: bold;
-        color: #892F30;
-        margin-top: 15px;
-        margin-left: 10px;
-    }
-
-    .cardFilosofiaLeyenda dd{
-        font-family: 'Open Sans', sans-serif;
-        font-size: 10px;
-        color: #000000;
-        margin-top: 10px;
-        margin-left: 10px; 
-    }
-
-    /*******************************
-    *****     PROMOCIONES     ***** 
-    *******************************/
-    
-    .bannerPromociones{
-        background-image: url("../assets/img/bg-promo-mobile.jpg");
-        background-position: center;
-        background-attachment: contain;
-        background-size: cover;
-        height: 150px;
-    }
-
-    .comboContenido {
-        padding: 1.4em;
-    }
-        
-    .comboContenido h2 {
-        margin-top: 0;
-        font-weight: bold;
-        color: #ED3237;
-    }
-        
-    .comboContenido p {
-        font-size: 10px;
-        text-align: center;
-        margin-bottom: 10px;
-    }
-        
-    .combos {
-        display: flex;
-        flex-wrap: wrap;
-        margin-bottom: 6%;
-        justify-content: center;
-    }
-        
-    .combo {
-        flex: 0 1 24%;
-    }
-    .combo li{
-        list-style: none;
-
-    }
-    .combo li a{
-        text-decoration: none;
-        
-    }
-    .unaColumnas {
-        display: flex;
-        flex-direction: row
-    }
-
-    .unaColumnas div {
-        flex:1; 
-        display:flex;
-        justify-content:center;
-        align-items:center;
-    }
-
-    .dosColumnas  {
-        display:flex;
-        flex-direction:row;
-    }
-
-    .dosColumnas div {
-        flex:1; 
-        display:flex;
-        justify-content:center;
-        align-items:center;
-    }
-
-    /***************************
-    *****     PEDIDOS     ***** 
-    ***************************/
-    
-    .bannerPedidos{
-        background-image: url("../assets/img/bg-pedidos-mobile.jpg");
-        background-position: center;
-        background-attachment: contain;
-        background-size: cover;
-        height: 150px;
-    }   
-
-    .pedidos {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: stretch;
-        justify-content: space-evenly;
-        align-content: stretch;
-    }
-        
-    .pedidoContenido {
-        padding: 1.4em;
-        text-align: center;
-    }
-
-    .pedidoContenido h2 {
-        margin-top: 0;
-        margin-bottom: .5em;
-        font-weight: bold;
-        font-size: 22px;
-        text-align: center;
-        color: #ED3237;
-    }
-        
-    .pedidoContenido p {
-        font-size: 10px;
-    }
-        
-    .pedido {
-        flex: 0 1 24%;
-        border: 1px solid #729A4A;
-        background-color: #d2cdcd;
-        justify-content: center;
-        align-content: center;
-        margin: 5px 5px 5px 5px ;
-    }
-
-    .thumbnail{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    /****************************
-    *****     CONTACTO     ***** 
-    ****************************/
-
-
-    .bannerContacto{
-        background-image: url("../assets/img/bg-contacto-mobile.jpg");
-        background-position: center;
-        background-attachment: contain;
-        background-size: cover;
-        height: 150px;
-    }
-
-    .contacto {
-        margin: 10px 50px 10px 50px;	
-    }
-
-    .formContenido{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-        
-    .formTitulo{
-        text-align: center;
-    }
-        
-    .form{
-        max-width: 500px;
-        width: 80%;
-        padding: 2rem;
-    }
-        
-    .formGrupo{
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 7px;
-    }
-        
-    .formLabel{
-        margin-bottom: 2px;
-    }
-        
-    .formInput,
-    .formSubmit{
-        padding: .5rem;
-        border-radius: 3px;
-        border: none;
-
-        outline-color: #729A4A;
-    }
-        
-    .formSubmit{
-        background-color: #729A4A;
-        color: #fff;
-        text-transform: uppercase;
-        margin-top: 5px;
-        transition: background-color .5s ease;
-    }
-}
+    height: 150px; } }

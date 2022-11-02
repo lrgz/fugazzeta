@@ -1,0 +1,46 @@
+header{
+
+    grid-area: header;
+    background-color:$color-special-gray;
+    @include props-flex(column,nowrap,none,none)
+
+
+}
+
+.topMenu {
+    @include props-flex(row,nowrap,none,flex-star);
+}
+
+.logoTop
+{
+    flex: 1 1 auto;
+}
+
+
+.nav-link{
+    text-decoration: none;
+    color:$color-white;
+    &:focus{
+        color: $color-green ;
+    };
+    &:hover{
+        color: $color-green ;
+    };
+}
+
+
+.navbar-toggler {
+    border-color:$color-green;
+    &:focus{
+        text-decoration: none;
+        outline: 0;
+        box-shadow: 0 0 0 var(--bs-navbar-toggler-focus-width);
+        color:$color-green ;
+    }
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba%2840, 123, 72, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+}
+
+

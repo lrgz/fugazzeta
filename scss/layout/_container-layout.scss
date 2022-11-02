@@ -1,0 +1,23 @@
+
+/***************************
+ *****     GENERAL     ***** 
+ ***************************/
+ body{
+    background-color: $color-background;
+    font-family: $body-font-family;
+    font-size: $base-font-size;
+     
+}
+
+
+/**************************
+ *****     LAYOUT     *****
+ **************************/
+
+ .containerLayout{
+    @include props-grid(100%,100vh,4,1fr,3,1fr);
+    grid-template-areas: 
+    "header header header header"
+    "main main main main"
+    "footer footer footer footer";
+}

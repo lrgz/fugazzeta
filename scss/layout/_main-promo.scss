@@ -1,0 +1,59 @@
+main{
+    grid-area: main;
+    background-color: $color-background;
+    @include props-flex(column,nowrap,none,none);
+    h1{
+        @include title-1;
+    };
+    h2{
+        @include title-2;
+    };
+}
+
+.bannerPromociones{
+    @include banners("../assets/img/bg-promo.jpg",center,contain,cover,300px);
+}
+
+
+.comboContenido {
+    padding: 1.4em;
+    h2 {
+        margin-top: 0;
+        font-weight: bold;
+        color: $color-red;
+    };
+    p {
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
+    
+
+.combos {
+    @include props-flex(none,wrap,center,none);
+    margin-bottom: 6%;
+}
+    
+
+.combo {
+    flex: 0 1 24%;
+    li{
+        list-style: none;
+    };
+    & a{
+        text-decoration: none;
+    }
+}
+
+.unaColumnas {
+    @include combos;
+}
+
+.dosColumnas  {
+    @include combos;
+}
+
+
+
+

@@ -1,0 +1,53 @@
+main{
+    grid-area: main;
+    background-color: $color-background;
+    @include props-flex(column,nowrap,none,none);
+    h1{
+        @include title-1;
+    };
+    h2{
+        @include title-2;
+    };
+}
+
+.bannerNosotros{
+    @include banners("../assets/img/bg-nosotros.jpg",center,contain,cover,300px);
+}
+
+
+.historia{
+    margin: 10px 50px 10px 50px;
+    @include props-flex(row,wrap,center,none);
+}
+
+.historia img {
+    margin: 35px 30px 30px 15px;
+    height: 400px;
+    width: 400px;
+    justify-content: center;
+}
+
+.filosofia{
+    margin: 10px 50px 10px 50px;
+    @include props-flex(row,none,center,none);
+
+}
+
+.cardFilosofia{
+    margin: 10px 50px 10px 50px;
+    border: 1.5px none;
+    border-radius: 10px;
+    @include props-flex(row,none,none,none);
+}
+
+.cardFilosofiaLeyenda {
+    dt{
+        @include card-dt(14px) ;
+    }
+    dd{
+        @include card-dd(10px);
+    }
+}
+
+
+

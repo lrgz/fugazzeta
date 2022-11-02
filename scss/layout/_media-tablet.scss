@@ -1,0 +1,201 @@
+/*******************************
+*****     MEDIA MOBILE     *****
+********************************/
+
+@media (max-width:768px){
+    body {
+      background-color: $color-background;
+      font-family: $body-font-family;
+      font-size: $base-font-size-table;
+    }
+  
+    .containerLayout {
+      @include props-grid(100%, 100vh,  1fr, 3, 1fr);
+      grid-template-areas:
+        "header header header header"
+        "main main main main"
+        "footer footer footer footer";
+    }
+  
+    main {
+      grid-area: main;
+      background-color: $color-background;
+      @include props-flex(column, nowrap, none, none);
+      h1 {
+        @include title-1;
+        font-size: 28px;
+        font-weight: 300px;
+      }
+      h2 {
+        @include title-2;
+        font-size:  24px;
+        font-weight: 300px;
+      }
+    }
+    .bannerInicio {
+      @include banners(
+        ".../assets/img/bg-inicio-table.jpg"",
+        center,
+        contain,
+        cover,
+        200px
+      );
+    }
+  
+    .cardProducto {
+      flex-direction: column;
+    }
+  
+    .cardProductoLeyenda {
+      dt {
+        @include card-dt(12px);
+      }
+      dd {
+        @include card-dd(10px);
+      }
+    }
+  
+    .tiempo {
+      margin: 10px 50px 10px 50px;
+      @include props-flex(row, nowrap, center, none);
+    }
+  
+    .tiempoStrong {
+      font-weight: bolder;
+      display: flex;
+      justify-content: center;
+    }
+  
+    .cardTiempo strong span {
+      background: url(../assets/img/time_panel.svg) no-repeat 0 0;
+      display: inline-block;
+      width: 80px;
+      margin-left: 10px;
+      height: 120px;
+      font-size: 48px;
+      color: $color-green;
+      line-height: 120px;
+      text-shadow: 1px 1px 2px $color-white;
+      text-align: center;
+    }
+  
+  
+    .cardTiempo p {
+      margin-top: 15px;
+      margin-bottom: 15px;
+      font-size: 20px;
+      color: $color-green;
+      font-weight: 700;
+      text-align: center;
+    }
+  
+    .cardDestacadaLeyenda {
+      dt {
+        @include card-dt(12px);
+      }
+      dd {
+        @include card-dd(10px);
+      }
+    }
+  
+    .bannerNosotros {
+      @include banners(
+        "../assets/img/bg-nosotros-table.jpg"",
+        center,
+        contain,
+        cover,
+        200px
+      );
+    }
+  
+    .historia img {
+      margin: 35px 30px 30px 15px;
+      height: 300px;
+      width: 300px;
+      justify-content: center;
+    }
+  
+    .filosofia {
+      flex-flow: column;
+    }
+  
+    .cardFilosofiaLeyenda {
+      dt {
+        @include card-dt(12px);
+      }
+      dd {
+        @include card-dd(10px);
+      }
+    }
+  
+    .bannerPromociones {
+      @include banners(
+        "../assets/img/bg-promo-table.jpg",
+        center,
+        contain,
+        cover,
+        200px
+      );
+    }
+  
+    .combos {
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+    .comboContenido {
+      padding: 1.4em;
+    }
+  
+    .comboContenido h2 {
+      font-size: 22px;
+    }
+  
+    .comboContenido p {
+      font-size: 12px;
+    }
+  
+    .bannerPedidos {
+      @include banners(
+        "../assets/img/bg-pedidos-table.jpg",
+        center,
+        contain,
+        cover,
+        200px
+      );
+    }
+  
+    .pedidos {
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+    .pedidoContenido {
+      h2 {
+        font-size: 22px;
+      }
+      p {
+        font-size: 120px;
+      }
+    }
+  
+    main {
+      h1 {
+        font-size: 26px;
+        font-weight: 300px;
+      }
+      h2 {
+        font-size: 22px;
+        font-weight: 300px;
+      }
+    }
+  
+    .bannerContacto {
+      @include banners(
+        "../assets/img/bg-contacto-table.jpg",
+        center,
+        contain,
+        cover,
+        200px
+      );
+    }
+  }
+  

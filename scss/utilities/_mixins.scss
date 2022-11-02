@@ -1,0 +1,94 @@
+/**************************
+ *****     MIXUNS     *****
+ **************************/
+@mixin props-grid($width,$height,$columns,$frc,$rows,$frr){
+    display: grid;
+    width: $width;
+    height: $height;
+    grid-template-columns: repeat($columns,$frc);
+    grid-template-rows: repeat($rows,$frr);
+}
+
+
+@mixin props-flex($direction,$wrap,$justify-content,$align-item){
+    display: flex;
+    flex-flow:  $direction ;
+    flex-wrap : $wrap;
+    justify-content: $justify-content;
+    align-items:$align-item;
+}
+
+
+@mixin banners($img,$position,$attch,$size,$height){
+    background-image: url($img);
+    background-position: $position;
+    background-attachment: $attch;
+    background-size: $size;
+    height: $height;
+}
+
+
+@mixin title-1 {
+    font-family: $heading-font-family;
+    font-size: $title-font-size-1;
+    font-weight: $font-weight-300;
+    color:$color-white;
+    text-transform: uppercase ;
+    text-align: right;
+};
+
+@mixin title-2{
+    margin-top: 10px;
+    font-family: $heading-font-family;
+    font-size: $title-font-size-2;
+    font-weight: $font-weight-300;
+    color: $color-green;
+    text-transform: uppercase ;
+    text-align: center;
+};
+
+@mixin card-info($ml,$mt,$mr,$mb,$bg-color,$dim-bor,$type-bor,$color-bor,$radi-bor) {
+    margin: $ml $mt $mr $mb;
+    background-color:$bg-color;
+    border: $dim-bor $type-bor $color-bor;
+    border-radius: $radi-bor;
+}
+
+
+@mixin card-img($ml,$mt,$mr,$mb,$width,$height) {
+    margin: $ml $mt $mr $mb;
+    height: $width;
+    width: $height;
+
+}
+
+
+
+@mixin  card-dt ($font-size){
+    font-family: $body-font-family;
+    font-size: $font-size;
+    font-weight: bold;
+    color:$color-bordo;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+@mixin card-dd ($font-size){ 
+    font-family: $body-font-family;
+    font-size: $font-size;
+    color: $color-black;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+
+
+
+@mixin combos{
+    display:flex;
+    flex-direction:row;
+    div {
+        flex:1; 
+        @include props-flex(none,none,center,center);
+    }
+}
