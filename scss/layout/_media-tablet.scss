@@ -10,7 +10,7 @@
     }
   
     .containerLayout {
-      @include props-grid(100%, 100vh,  1fr, 3, 1fr);
+      @include props-grid(100%,100vh,4,1fr,3,1fr);
       grid-template-areas:
         "header header header header"
         "main main main main"
@@ -34,16 +34,20 @@
     }
     .bannerInicio {
       @include banners(
-        ".../assets/img/bg-inicio-table.jpg"",
+        "../assets/img/bg-inicio-table.jpg",
         center,
         contain,
         cover,
         200px
       );
     }
-  
-    .cardProducto {
+
+    .producto{
       flex-direction: column;
+    } 
+
+    .cardProducto {
+      flex-direction: row;
     }
   
     .cardProductoLeyenda {
@@ -67,7 +71,7 @@
     }
   
     .cardTiempo strong span {
-      background: url(../assets/img/time_panel.svg) no-repeat 0 0;
+      background: url("../assets/img/time_panel.svg") no-repeat 0 0;
       display: inline-block;
       width: 80px;
       margin-left: 10px;
@@ -100,7 +104,7 @@
   
     .bannerNosotros {
       @include banners(
-        "../assets/img/bg-nosotros-table.jpg"",
+        "../assets/img/bg-nosotros-table.jpg",
         center,
         contain,
         cover,
@@ -168,12 +172,21 @@
       flex-direction: column;
       flex-wrap: wrap;
     }
+
+    .pedido{
+      flex: 0 1 24%;
+      border: 1px solid #729A4A;
+      background-color: #d2cdcd;
+      justify-content: center;
+      align-content: center;
+      margin: 5px 5px 5px 5px;
+  }
     .pedidoContenido {
       h2 {
         font-size: 22px;
       }
       p {
-        font-size: 120px;
+        font-size: 12px;
       }
     }
   
