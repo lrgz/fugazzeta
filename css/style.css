@@ -413,10 +413,10 @@ main {
 .pedidos {
   display: flex;
   flex-flow: wrap;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-evenly;
   align-items: stretch;
-  align-content: stretch; }
+  align-content: center; }
 
 .pedidoContenido {
   padding: 1.4em;
@@ -425,11 +425,12 @@ main {
     margin-top: 0;
     margin-bottom: .5em;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 12px;
     text-align: center;
     color: #ED3237; }
   .pedidoContenido p {
-    font-size: 14px; }
+    font-size: 10px;
+    align-items: center; }
 
 .pedido {
   flex: 0 1 24%;
@@ -702,3 +703,184 @@ footer {
     background-attachment: contain;
     background-size: cover;
     height: 150px; } }
+
+/*******************************
+*****     MEDIA MOBILE     *****
+********************************/
+@media (max-width: 768px) {
+  body {
+    background-color: #ECECEC;
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px; }
+  .containerLayout {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "header header header header" "main main main main" "footer footer footer footer"; }
+  main {
+    grid-area: main;
+    background-color: #ECECEC;
+    display: flex;
+    flex-flow: column;
+    flex-wrap: nowrap;
+    justify-content: none;
+    align-items: none; }
+    main h1 {
+      font-family: "Lato", sans-serif;
+      font-size: 36px;
+      font-weight: 300px;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      text-align: right;
+      font-size: 28px;
+      font-weight: 300px; }
+    main h2 {
+      margin-top: 10px;
+      font-family: "Lato", sans-serif;
+      font-size: 28px;
+      font-weight: 300px;
+      color: #287b48;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 24px;
+      font-weight: 300px; }
+  .bannerInicio {
+    background-image: url("../assets/img/bg-inicio-table.jpg");
+    background-position: center;
+    background-attachment: contain;
+    background-size: cover;
+    height: 200px; }
+  .producto {
+    flex-direction: column; }
+  .cardProducto {
+    flex-direction: row; }
+  .cardProductoLeyenda dt {
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #892F30;
+    margin-top: 15px;
+    margin-left: 10px; }
+  .cardProductoLeyenda dd {
+    font-family: "Open Sans", sans-serif;
+    font-size: 10px;
+    color: #000000;
+    margin-top: 10px;
+    margin-left: 10px; }
+  .tiempo {
+    margin: 10px 50px 10px 50px;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: none; }
+  .tiempoStrong {
+    font-weight: bolder;
+    display: flex;
+    justify-content: center; }
+  .cardTiempo strong span {
+    background: url("../assets/img/time_panel.svg") no-repeat 0 0;
+    display: inline-block;
+    width: 80px;
+    margin-left: 10px;
+    height: 120px;
+    font-size: 48px;
+    color: #287b48;
+    line-height: 120px;
+    text-shadow: 1px 1px 2px #FFFFFF;
+    text-align: center; }
+  .cardTiempo p {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #287b48;
+    font-weight: 700;
+    text-align: center; }
+  .cardDestacadaLeyenda dt {
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #892F30;
+    margin-top: 15px;
+    margin-left: 10px; }
+  .cardDestacadaLeyenda dd {
+    font-family: "Open Sans", sans-serif;
+    font-size: 10px;
+    color: #000000;
+    margin-top: 10px;
+    margin-left: 10px; }
+  .bannerNosotros {
+    background-image: url("../assets/img/bg-nosotros-table.jpg");
+    background-position: center;
+    background-attachment: contain;
+    background-size: cover;
+    height: 200px; }
+  .historia img {
+    margin: 35px 30px 30px 15px;
+    height: 300px;
+    width: 300px;
+    justify-content: center; }
+  .filosofia {
+    flex-flow: column; }
+  .cardFilosofiaLeyenda dt {
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #892F30;
+    margin-top: 15px;
+    margin-left: 10px; }
+  .cardFilosofiaLeyenda dd {
+    font-family: "Open Sans", sans-serif;
+    font-size: 10px;
+    color: #000000;
+    margin-top: 10px;
+    margin-left: 10px; }
+  .bannerPromociones {
+    background-image: url("../assets/img/bg-promo-table.jpg");
+    background-position: center;
+    background-attachment: contain;
+    background-size: cover;
+    height: 200px; }
+  .combos {
+    flex-direction: column;
+    flex-wrap: wrap; }
+  .comboContenido {
+    padding: 1.4em; }
+  .comboContenido h2 {
+    font-size: 22px; }
+  .comboContenido p {
+    font-size: 12px; }
+  .bannerPedidos {
+    background-image: url("../assets/img/bg-pedidos-table.jpg");
+    background-position: center;
+    background-attachment: contain;
+    background-size: cover;
+    height: 200px; }
+  .pedidos {
+    flex-direction: column;
+    flex-wrap: wrap; }
+  .pedido {
+    flex: 0 1 24%;
+    border: 1px solid #729A4A;
+    background-color: #d2cdcd;
+    justify-content: center;
+    align-content: center;
+    margin: 5px 5px 5px 5px; }
+  .pedidoContenido h2 {
+    font-size: 22px; }
+  .pedidoContenido p {
+    font-size: 12px; }
+  main h1 {
+    font-size: 26px;
+    font-weight: 300px; }
+  main h2 {
+    font-size: 22px;
+    font-weight: 300px; }
+  .bannerContacto {
+    background-image: url("../assets/img/bg-contacto-table.jpg");
+    background-position: center;
+    background-attachment: contain;
+    background-size: cover;
+    height: 200px; } }
